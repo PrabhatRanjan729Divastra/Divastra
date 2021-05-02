@@ -1,8 +1,26 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
 <head>
 	<title>Divastra: LogIn</title>
+
+	
+
+</head>
+<body>
+
+	<form autocomplete="on" onsubmit="login(event)">
+		<input type="email"id="logInEmail" placeholder="Email"/>
+		<input type="password" id="logInPassword" placeholder="Password" />
+		<button type="submit"value="OK">ok</button>
+	</form>
+
+	<form autocomplete="on" onsubmit="signup(event)">
+		<input type="email"id="signUpEmail" placeholder="Email"/>
+		<input type="password" id="signUpPassword" placeholder="Password" />
+		<button type="submit"value="OK">ok</button>
+	</form>
+	<button onclick="logout()">ok</button>
+	<button onclick="logInWithGoogle()">logInWithGoogle</button>
 
 	<!-- The core Firebase JS SDK is always required and must be listed first -->
 	<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
@@ -10,23 +28,24 @@
 	<!-- TODO: Add SDKs for Firebase products that you want to use
 	     https://firebase.google.com/docs/web/setup#available-libraries -->
 	<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-analytics.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
-	<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
+	<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
 
-
-</head>
-<body>
-
-	<script type="text/javascript" src="main.js"></script>
-	<script type="text/javascript" src="firebase.js"></script>
-	
-
-	<!-- The surrounding HTML is left untouched by FirebaseUI.
-     Your app may use that space for branding, controls and other customizations.-->
-	<h1>Welcome to My Awesome App</h1>
-	<div id="firebaseui-auth-container"></div>
-	<div id="loader">Loading...</div>
-
-
+	<script>
+	  // Your web app's Firebase configuration
+	  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+	  var firebaseConfig = {
+	    apiKey: "AIzaSyB6hUDbDxQ7jAun5AP4wWmHc371gXfhXwo",
+	    authDomain: "divastra-bc212.firebaseapp.com",
+	    projectId: "divastra-bc212",
+	    storageBucket: "divastra-bc212.appspot.com",
+	    messagingSenderId: "601141865226",
+	    appId: "1:601141865226:web:21317718e4d62ecbefa8f3",
+	    measurementId: "G-D0GHTE5S6L"
+	  };
+	  // Initialize Firebase
+	  firebase.initializeApp(firebaseConfig);
+	  firebase.analytics();
+	</script>
+	<script type="text/javascript"src="./scripts/auth.js"></script>
 </body>
 </html>
