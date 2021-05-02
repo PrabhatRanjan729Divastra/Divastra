@@ -8,19 +8,9 @@
 </head>
 <body>
 
-	<form autocomplete="on" onsubmit="login(event)">
-		<input type="email"id="logInEmail" placeholder="Email"/>
-		<input type="password" id="logInPassword" placeholder="Password" />
-		<button type="submit"value="OK">ok</button>
-	</form>
-
-	<form autocomplete="on" onsubmit="signup(event)">
-		<input type="email"id="signUpEmail" placeholder="Email"/>
-		<input type="password" id="signUpPassword" placeholder="Password" />
-		<button type="submit"value="OK">ok</button>
-	</form>
-	<button onclick="logout()">ok</button>
-	<button onclick="logInWithGoogle()">logInWithGoogle</button>
+	
+	<button onclick="logout()">LogOut</button>
+	<button onclick="logInWithGoogle()">Google LogIn</button>
 
 	<!-- The core Firebase JS SDK is always required and must be listed first -->
 	<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
